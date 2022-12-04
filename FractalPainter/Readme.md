@@ -1,14 +1,14 @@
 # Задание FractalPainter
 
-1. Разминка. В классе Program переделайте Main так, чтобы MainForm 
++ 1. Разминка. В классе Program переделайте Main так, чтобы MainForm 
 создавался контейнером. Удалите у MainForm конструктор без параметров 
 и сделайте так, чтобы контейнер инжектировал в MainForm список IUiAction.
 
-2. INeed<T>. Изучите код KochFractalAction. 
++ 2. INeed<T>. Изучите код KochFractalAction. 
 Изучите механику работы INeed<T> и DependencyInjector.
 Оцените такой подход к управлению зависимостями.
 
-3. Рефакторинг. Измените класс KochFractalAction так, 
++ 3. Рефакторинг. Измените класс KochFractalAction так, 
 чтобы его зависимости IImageHolder и Pallette инжектировались 
 явно через конструктор, без использования интерфейса INeed.
 
@@ -17,11 +17,11 @@
   
   Убедитесь, что настройка палитры для рисования кривой Коха всё ещё работает.
 
-4. Еще рефакторинг. Изучите KochFractalAction и поймите, что 
++ 4. Еще рефакторинг. Изучите KochFractalAction и поймите, что 
 на самом деле IImageHolder и Pallette ему не нужны. Измените его так,
 чтобы он принимал только KochPainter. 
 
-5. Фабрика. Аналогично удалите INeed, 
++ 5. Фабрика. Аналогично удалите INeed, 
 и явное использование контейнера из класса DragonFractalAction.
 Дополнительное ограничение — нельзя менять публичный интерфейс DragonPainter.
 Особенность в том, что одна из зависимостей DragonPainter — 
@@ -35,7 +35,7 @@ https://github.com/ninject/Ninject.Extensions.Factory/wiki/Factory-interface
 договоренность - имена параметров метода в фабрике должны совпадать с именами
 параметров конструктора создаваемой сущности.
 
-6. Фабрика 2. Используйте для создания DragonSettingsGenerator Func-фабрику 
++ 6. Фабрика 2. Используйте для создания DragonSettingsGenerator Func-фабрику 
 и инжектируйте эту зависимость в DragonFractalAction.
 https://github.com/ninject/Ninject.Extensions.Factory/wiki/Func
 
